@@ -218,6 +218,13 @@ process {
     errorStrategy = 'finish'
   }
 
+  withName: 'TINC' {
+    container = 'file:///orfeo/LTS/CDSLab/LT_storage/shared/containers/singularity/cnaqc.sif'
+    memory = '100 GB'
+    time = '1h'
+    errorStrategy = 'finish'
+  }
+
   withName: 'CNAQC_ANALYSIS' {
     container = 'file:///orfeo/LTS/CDSLab/LT_storage/shared/containers/singularity/cnaqc.sif'
     //label = "cnaqc_analysis"
